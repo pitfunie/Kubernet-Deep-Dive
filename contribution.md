@@ -34,7 +34,7 @@ access jenkins http://<host-ip>:8080
 
 
 
-==============================================
+============================================== windows OS
 
 Text Direction : Download and Configure Jenkins on Windows
 
@@ -143,6 +143,63 @@ Issue "path" command to list the contents of the PATH environment variable. Chec
 Don't type prompt>, which denotes the command prompt!!! Key in the command (highlighted) only.
 
 // Display the PATH entriesprompt> pathPATH=c:\Program Files\Java\jdk-8.0.{x}\bin;[other entries...]
+
+
+===============================================MacOS
+
+ext Direction : Download and Configure Jenkins on MAC OS
+
+Install Java 8 on MAC OS
+
+
+Step 1: Check if JDK has been Pre-Installed
+
+In some Mac systems (earlier than Mac OS X 10.7), JDK has been pre-installed. To check if JDK has been installed, open a "Terminal" (Search "Terminal"; or Finder ⇒ Go ⇒ Utilities ⇒ Terminal) and 
+issue this command:
+
+
+javac -version
+
+If a JDK version number is returned (e.g., JDK x.x.x), then JDK has already been installed. If the JDK version is prior to 1.8, proceed to Step 2 to install the latest JDK; otherwise, proceed to 
+
+"Step 3: Write a Hello-world Java program".
+
+If message "command not found" appears, JDK is NOT installed. Proceed to the "Step 2: Install JDK".
+
+If message "To open javac, you need a Java runtime" appears, select "Install" and follow the instructions to install JDK. Then, proceed to "Step 3: Write a Hello-world Java program".
+
+
+
+Step 2: Download JDK
+
+Goto Java SE download site @ http://www.oracle.com/technetwork/java/javase/downloads/index.html. Under "Java Platform, Standard Edition" ⇒ "Java SE 10.0.{x}" ⇒ Click the JDK's "Download" button.
+
+Check "Accept License Agreement".
+
+Choose your operating platform, i.e., MacOS. Download the installer (e.g, jdk-1.8.0.{x}_osx-x64_bin.dmg - 395MB).
+
+
+
+Step 3: Install JDK/JRE
+
+Double-click the downloaded Disk Image (DMG) file. Follow the screen instructions to install JDK/JRE.
+
+Eject the DMG file.
+
+To verify your installation, open a "Terminal" and issue these commands.
+
+// Display the JDK versionjavac -versionjavac 10.0.{x} // Display the JRE versionjava -versionjava version "10.0.{x}"...... // Display the location of Java Compilerwhich javac/usr/bin/javac // Display the location of Java Runtimewhich java/usr/bin/java
+
+
+
+Start Jenkins on Mac OS
+1. Open terminal and execute command
+
+java -jar ~/path-to-jenkins-war/jenkins.war -httpPort={Port_Num}
+
+
+
+
 
 Issue the following commands to verify that JDK/JRE are properly installed and display their version:
 
