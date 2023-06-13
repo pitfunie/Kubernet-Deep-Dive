@@ -25,5 +25,9 @@ Release:	22.10
 https://pkg.jenkins.io/debian-stable/                         
                          
 sudo systemctl start jenkins
+
 sudo systemctl status jenkins                         
+
 sudo systemcrt enable jenkins                            
+
+access jenkins http://<host-ip>:8080                         
